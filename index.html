@@ -358,6 +358,21 @@ model-viewer {
     method1 = "isdf";
   });
 
+  btn_voxblox1 = document.getElementById('voxblox1');
+  btn_voxblox1.addEventListener('click', function onClick() {    
+    btn_voxblox1.className = 'button is-info is-rounded';
+    document.getElementById('gt1').className = 'button is-normal is-rounded';    
+    document.getElementById('our1').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap1').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf1').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox1').className = 'button is-info is-rounded'; 
+
+    // set the video 
+    m1.setAttribute('src', data['vox']['model']);
+    method1 = "vox";
+  });
+
+
 // SECOND
 
   btn_gt2 = document.getElementById('gt2');
@@ -412,10 +427,23 @@ model-viewer {
     document.getElementById('voxblox2').className = 'button is-normal is-rounded'; 
 
     // set the video 
-    m1.setAttribute('src', data['isdf']['model']);
-    method1 = "isdf";
+    m2.setAttribute('src', data['isdf']['model']);
+    method2 = "isdf";
   });
 
+  btn_voxblox2 = document.getElementById('voxblox2');
+  btn_voxblox2.addEventListener('click', function onClick() {    
+    btn_voxblox2.className = 'button is-info is-rounded';
+    document.getElementById('gt2').className = 'button is-normal is-rounded';    
+    document.getElementById('our2').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap2').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf2').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox2').className = 'button is-info is-rounded'; 
+
+    // set the video 
+    m2.setAttribute('src', data['vox']['model']);
+    method2 = "vox";
+  });
 </script>
 
 
