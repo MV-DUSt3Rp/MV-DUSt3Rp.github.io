@@ -261,8 +261,93 @@ model-viewer {
 
 
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns has-text-centered">
+        <div class="column is-centered">
+          <model-viewer class="is-centered" 
+          id='anim1' alt="chair" 
+          src="static/bala_anim.glb" 
+          shadow-intensity="1" 
+          autoplay
+          ar-modes="webxr scene-viewer"
+          ar environment-image="static/models/thatch_chapel_2k.hdr"
+          auto-rotate rotation-per-second="40deg" 
+          camera-controls touch-action="pan-y"
+          camera-orbit='auto auto 5%'
+          >
+          </model-viewer>
+        </div>
+      </div>
+      <div class="columns has-text-centered">
+        <div class="column is-offset-3 is-1">
+          <div class='button is-pulled-right' id='play'>play</div>
+        </div>
+        <div class="column is-5 ">
+          <input class="slider is-pulled-left is-fullwidth is-success" id="bar" step="1" min="0" max="100" value="0" type="range">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <script>
+         
+  play = document.getElementById('play')
+
+  play.addEventListener('click', function onClick() {    
+    m1 = document.getElementById('play');
+    anim = document.querySelector('#anim1');
+    if (m1.innerText == 'play'){
+      m1.innerText = 'pause';
+      // anim.setAttribute('autoplay',"false");
+      anim.pause();
+    }
+    else{
+      m1.innerText = 'play';
+      // anim.setAttribute('autoplay',"true");
+      anim.play();
+    }
+  });
+
+
+  bar = document.getElementById('bar')
+  bar.addEventListener('click', function onClick() {    
+    
+    anim = document.querySelector('#anim1');   
+    bar = document.querySelector('#bar');
+    var t_set = bar.value/bar.max;
+
+    anim.currentTime = t_set*anim.duration;
+
+  });
+
+  anim = document.querySelector('#anim1');
+  anim.addEventListener('load', (event) => {    
+
+    console.log('something')
+    setTimeout(update_inf, 0.01);
+  });
+
+
+function update_inf (){
+  //play to end or rewind if animation is at end//
+    const modelViewer = document.querySelector('#homme');
+    anim = document.querySelector('#anim1');
+    bar = document.querySelector('#bar');
+    bar.value = parseInt(anim.currentTime/anim.duration*100);
+
+    setTimeout(update_inf, 0.01);
+}
+
+  const video = document.querySelector('#anim1');
+
+  video.addEventListener('timeupdate', (event) => {
+    console.log('The currentTime attribute has been updated. Again.');
+  });
+
   var data_ap13 = {
     "gt":{
       "video":"https://i.imgur.com/yY0myqN.mp4",
