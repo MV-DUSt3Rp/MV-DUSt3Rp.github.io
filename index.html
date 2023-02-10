@@ -267,7 +267,7 @@ model-viewer {
       <div class="columns has-text-centered">
         <div class="column is-centered">
           <model-viewer class="is-centered" 
-          id='anim1' alt="chair" 
+          id='anim_bala' alt="chair" 
           src="static/bala_anim.glb" 
           shadow-intensity="1" 
           autoplay
@@ -299,7 +299,7 @@ model-viewer {
 
   play.addEventListener('click', function onClick() {    
     m1 = document.getElementById('play');
-    anim = document.querySelector('#anim1');
+    anim = document.querySelector('#anim_bala');
     if (m1.innerText == 'play'){
       m1.innerText = 'pause';
       // anim.setAttribute('autoplay',"false");
@@ -316,7 +316,7 @@ model-viewer {
   bar = document.getElementById('bar')
   bar.addEventListener('click', function onClick() {    
     
-    anim = document.querySelector('#anim1');   
+    anim = document.querySelector('#anim_bala');   
     bar = document.querySelector('#bar');
     var t_set = bar.value/bar.max;
 
@@ -324,7 +324,7 @@ model-viewer {
 
   });
 
-  anim = document.querySelector('#anim1');
+  anim = document.querySelector('#anim_bala');
   anim.addEventListener('load', (event) => {    
 
     console.log('something')
@@ -332,21 +332,16 @@ model-viewer {
   });
 
 
-function update_inf (){
-  //play to end or rewind if animation is at end//
-    const modelViewer = document.querySelector('#homme');
-    anim = document.querySelector('#anim1');
-    bar = document.querySelector('#bar');
-    bar.value = parseInt(anim.currentTime/anim.duration*100);
+  function update_inf (){
+    //play to end or rewind if animation is at end//
+      const modelViewer = document.querySelector('#homme');
+      anim = document.querySelector('#anim_bala');
+      bar = document.querySelector('#bar');
+      bar.value = parseInt(anim.currentTime/anim.duration*100);
 
-    setTimeout(update_inf, 0.01);
-}
+      setTimeout(update_inf, 0.01);
+  }
 
-  const video = document.querySelector('#anim1');
-
-  video.addEventListener('timeupdate', (event) => {
-    console.log('The currentTime attribute has been updated. Again.');
-  });
 
   var data_ap13 = {
     "gt":{
