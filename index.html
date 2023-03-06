@@ -261,7 +261,7 @@ model-viewer {
 
 
 
-<section class="hero">
+<!-- <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns has-text-centered">
@@ -290,57 +290,57 @@ model-viewer {
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <script>
          
-  play = document.getElementById('play')
+  // play = document.getElementById('play')
 
-  play.addEventListener('click', function onClick() {    
-    m1 = document.getElementById('play');
-    anim = document.querySelector('#anim_bala');
-    if (m1.innerText == 'play'){
-      m1.innerText = 'pause';
-      // anim.setAttribute('autoplay',"false");
-      anim.pause();
-    }
-    else{
-      m1.innerText = 'play';
-      // anim.setAttribute('autoplay',"true");
-      anim.play();
-    }
-  });
+  // play.addEventListener('click', function onClick() {    
+  //   m1 = document.getElementById('play');
+  //   anim = document.querySelector('#anim_bala');
+  //   if (m1.innerText == 'play'){
+  //     m1.innerText = 'pause';
+  //     // anim.setAttribute('autoplay',"false");
+  //     anim.pause();
+  //   }
+  //   else{
+  //     m1.innerText = 'play';
+  //     // anim.setAttribute('autoplay',"true");
+  //     anim.play();
+  //   }
+  // });
 
 
-  bar = document.getElementById('bar')
-  bar.addEventListener('click', function onClick() {    
+  // bar = document.getElementById('bar')
+  // bar.addEventListener('click', function onClick() {    
     
-    anim = document.querySelector('#anim_bala');   
-    bar = document.querySelector('#bar');
-    var t_set = bar.value/bar.max;
+  //   anim = document.querySelector('#anim_bala');   
+  //   bar = document.querySelector('#bar');
+  //   var t_set = bar.value/bar.max;
 
-    anim.currentTime = t_set*anim.duration;
+  //   anim.currentTime = t_set*anim.duration;
 
-  });
+  // });
 
-  anim = document.querySelector('#anim_bala');
-  anim.addEventListener('load', (event) => {    
+  // anim = document.querySelector('#anim_bala');
+  // anim.addEventListener('load', (event) => {    
 
-    console.log('something')
-    setTimeout(update_inf, 0.01);
-  });
+  //   console.log('something')
+  //   setTimeout(update_inf, 0.01);
+  // });
 
 
-  function update_inf (){
-    //play to end or rewind if animation is at end//
-      const modelViewer = document.querySelector('#homme');
-      anim = document.querySelector('#anim_bala');
-      bar = document.querySelector('#bar');
-      bar.value = parseInt(anim.currentTime/anim.duration*100);
+  // function update_inf (){
+  //   //play to end or rewind if animation is at end//
+  //     const modelViewer = document.querySelector('#homme');
+  //     anim = document.querySelector('#anim_bala');
+  //     bar = document.querySelector('#bar');
+  //     bar.value = parseInt(anim.currentTime/anim.duration*100);
 
-      setTimeout(update_inf, 0.01);
-  }
+  //     setTimeout(update_inf, 0.01);
+  // }
 
 
   var data_ap13 = {
