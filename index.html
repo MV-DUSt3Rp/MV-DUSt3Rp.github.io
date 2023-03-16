@@ -584,9 +584,21 @@ model-viewer {
   }
 
   data = data_ap13;
+  m11 = document.getElementById("m11")
+  m21 = document.getElementById("m21")
+  
+  m12 = document.getElementById("m12")
+  m22 = document.getElementById("m22")
+  
   m1 = document.getElementById("m1")
   m2 = document.getElementById("m2")
 
+
+  method11 = 'gt';
+  method21 = 'our';
+  
+  method12 = 'gt';
+  method22 = 'our';
 
   method1 = 'gt';
   method2 = 'our';
@@ -739,6 +751,175 @@ model-viewer {
     m2.setAttribute('src', data_ap13['vox']['model']);
     method2 = "vox";
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  btn_gt1 = document.getElementById('gt11');
+  btn_gt1.addEventListener('click', function onClick() {    
+    btn_gt1.className = 'button is-info is-rounded';
+    document.getElementById('gt11').className = 'button is-info is-rounded';    
+    document.getElementById('our11').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap11').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf11').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox11').className = 'button is-normal is-rounded'; 
+
+    // set the video 
+    m11.setAttribute('src', data_ap11['gt']['model']);
+    method11 = "gt";
+  });
+
+  btn_our1 = document.getElementById('our11');
+  btn_our1.addEventListener('click', function onClick() {    
+    btn_our1.className = 'button is-info is-rounded';
+    document.getElementById('gt11').className = 'button is-normal is-rounded';    
+    document.getElementById('our11').className = 'button is-info is-rounded';    
+    document.getElementById('colmap11').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf11').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox11').className = 'button is-normal is-rounded'; 
+
+    // set the video 
+    m11.setAttribute('src', data_ap11['our']['model']);
+    method11 = "our";
+  });
+
+  btn_colmap1 = document.getElementById('colmap11');
+  btn_colmap1.addEventListener('click', function onClick() {    
+    btn_colmap1.className = 'button is-info is-rounded';
+    document.getElementById('gt11').className = 'button is-normal is-rounded';    
+    document.getElementById('our11').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap11').className = 'button is-info is-rounded';    
+    document.getElementById('isdf11').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox11').className = 'button is-normal is-rounded'; 
+
+    // set the video 
+    m11.setAttribute('src', data_ap11['colmap']['model']);
+    method11 = "colmap";
+  });
+
+  btn_isdf1 = document.getElementById('isdf11');
+  btn_isdf1.addEventListener('click', function onClick() {    
+    btn_isdf1.className = 'button is-info is-rounded';
+    document.getElementById('gt11').className = 'button is-normal is-rounded';    
+    document.getElementById('our11').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap11').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf11').className = 'button is-info is-rounded';    
+    document.getElementById('voxblox11').className = 'button is-normal is-rounded'; 
+
+    // set the video 
+    m11.setAttribute('src', data_ap11['isdf']['model']);
+    method11 = "isdf";
+  });
+
+  btn_voxblox1 = document.getElementById('voxblox11');
+  btn_voxblox1.addEventListener('click', function onClick() {    
+    btn_voxblox1.className = 'button is-info is-rounded';
+    document.getElementById('gt11').className = 'button is-normal is-rounded';    
+    document.getElementById('our11').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap11').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf11').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox11').className = 'button is-info is-rounded'; 
+
+    // set the video 
+    m11.setAttribute('src', data_ap11['vox']['model']);
+    method11 = "vox";
+  });
+
+
+// SECOND
+
+  btn_gt2 = document.getElementById('gt2');
+  btn_gt2.addEventListener('click', function onClick() {    
+    btn_gt2.className = 'button is-info is-rounded';
+    document.getElementById('gt2').className = 'button is-info is-rounded';    
+    document.getElementById('our2').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap2').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf2').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox2').className = 'button is-normal is-rounded'; 
+
+    // set the video 
+    m2.setAttribute('src', data_ap13['gt']['model']);
+    method2 = "gt";
+  });
+
+  btn_our2 = document.getElementById('our2');
+  btn_our2.addEventListener('click', function onClick() {    
+    btn_our2.className = 'button is-info is-rounded';
+    document.getElementById('gt2').className = 'button is-normal is-rounded';    
+    document.getElementById('our2').className = 'button is-info is-rounded';    
+    document.getElementById('colmap2').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf2').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox2').className = 'button is-normal is-rounded'; 
+
+    // set the video 
+    m2.setAttribute('src', data_ap13['our']['model']);
+    method2 = "our";
+  });
+
+  btn_colmap2 = document.getElementById('colmap2');
+  btn_colmap2.addEventListener('click', function onClick() {    
+    btn_colmap2.className = 'button is-info is-rounded';
+    document.getElementById('gt2').className = 'button is-normal is-rounded';    
+    document.getElementById('our2').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap2').className = 'button is-info is-rounded';    
+    document.getElementById('isdf2').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox2').className = 'button is-normal is-rounded'; 
+
+    // set the video 
+    m2.setAttribute('src', data_ap13['colmap']['model']);
+    method2 = "colmap";
+  });
+
+  btn_isdf2 = document.getElementById('isdf2');
+  btn_isdf2.addEventListener('click', function onClick() {    
+    btn_isdf2.className = 'button is-info is-rounded';
+    document.getElementById('gt2').className = 'button is-normal is-rounded';    
+    document.getElementById('our2').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap2').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf2').className = 'button is-info is-rounded';    
+    document.getElementById('voxblox2').className = 'button is-normal is-rounded'; 
+
+    // set the video 
+    m2.setAttribute('src', data_ap13['isdf']['model']);
+    method2 = "isdf";
+  });
+
+  btn_voxblox2 = document.getElementById('voxblox2');
+  btn_voxblox2.addEventListener('click', function onClick() {    
+    btn_voxblox2.className = 'button is-info is-rounded';
+    document.getElementById('gt2').className = 'button is-normal is-rounded';    
+    document.getElementById('our2').className = 'button is-normal is-rounded';    
+    document.getElementById('colmap2').className = 'button is-normal is-rounded';    
+    document.getElementById('isdf2').className = 'button is-normal is-rounded';    
+    document.getElementById('voxblox2').className = 'button is-info is-rounded'; 
+
+    // set the video 
+    m2.setAttribute('src', data_ap13['vox']['model']);
+    method2 = "vox";
+  });
+
+
+
+
+
+
+
+
+
 </script>
 
 <section class="section" id="BibTeX">
