@@ -6,7 +6,7 @@
         content="">
   <meta name="keywords" content="CVPR 2022">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RGB-Only Reconstruction of Tabletop Scenes for Collision-Free Manipulator Control</title>
+  <title>NeRFDeformer: NeRF Transformation from a Single View via 3D Scene Flows</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
@@ -39,21 +39,19 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">RGB-Only Reconstruction of Tabletop Scenes for Collision-Free Manipulator Control</h1>
+          <h1 class="title is-1 publication-title">NeRFDeformer: NeRF Transformation from a Single View via 3D Scene Flows</h1>
           <div class="is-size-5 publication-authors">
 <!--             Zhenggang Tang, Balakumar Sundaralingam, Jonathan Tremblay, Bowen Wen, Ye Yuan,  Stephen Tyree, Charles Loop, Alexander Schwing, Stan Birchfield
             NVIDIA & University of Illinois Urbana Champaign
  -->            
             <span class="author-block ">
-              <a href="https://scholar.google.com/citations?user=mGMy_kwAAAAJ">Zhenggang Tang</a><sup>1</sup>,
-              <a href="https://balakumar-s.github.io/">Balakumar Sundaralingam</a><sup>2</sup>,
-              <a href="https://research.nvidia.com/person/jonathan-tremblay">Jonathan Tremblay</a><sup>2</sup>,
+              <a href="https://recordmp3.github.io">Zhenggang Tang</a><sup>1</sup>,
+              <a href="https://jason718.github.io/">Zhongzheng Ren</a><sup>1</sup>,
+              <a href="https://xiaoming-zhao.com/">Xiaoming Zhao</a><sup>1</sup>,
               <a href="https://wenbowen123.github.io/">Bowen Wen</a><sup>2</sup>,
-              <a href="https://ye-yuan.com/">Ye Yuan</a><sup>1</sup>,
-              <a href="https://research.nvidia.com/person/stephen-tyree">Stephen Tyree</a><sup>2</sup>,
-              <a href="https://research.nvidia.com/person/charles-loop">Charles Loop</a><sup>2</sup>,
-              <a href="https://www.alexander-schwing.de">Alexander Schwing</a><sup>1</sup>,
+              <a href="https://research.nvidia.com/person/jonathan-tremblay">Jonathan Tremblay</a><sup>2</sup>,
               <a href="https://research.nvidia.com/person/stan-birchfield">Stan Birchfield</a><sup>2</sup>,
+              <a href="https://www.alexander-schwing.de">Alexander Schwing</a><sup>1</sup>,
             </span>
 
           </div>
@@ -67,7 +65,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2210.11668"
+                <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Tang_NeRFDeformer_NeRF_Transformation_from_a_Single_View_via_3D_Scene_CVPR_2024_paper.html"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -77,7 +75,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/embed/Bn1w9y5aYYg"
+                <a href="https://www.youtube.com/watch?v=oZsA6i9g_yM"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -86,7 +84,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://drive.google.com/drive/folders/15Ch7pJM8znw8l4-wHu6rJvDdwRoNqI8l?usp=share_link"
+                <a href="https://github.com/nerfdeformer/nerfdeformer/tree/main/data"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -95,8 +93,8 @@
                 </a>
               </span>
               <!-- Code Link. -->
-<!--               <span class="link-block">
-                <a href=""
+               <span class="link-block">
+                <a href="https://github.com/nerfdeformer/nerfdeformer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -104,7 +102,7 @@
                   <span>Code</span>
                   </a>
               </span>
- -->              <!-- Dataset Link. -->
+              <!-- Dataset Link. -->
               <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
@@ -128,7 +126,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present a system for collision-free control of a robot manipulator that uses only RGB views of the world. Perceptual input of a tabletop scene is provided by multiple images of an RGB camera (without depth) that is either handheld or mounted on the robot end effector. A NeRF-like process is used to reconstruct the 3D geometry of the scene, from which the Euclidean full signed distance function (ESDF) is computed. A model predictive control algorithm is then used to control the manipulator to reach a desired pose while avoiding obstacles in the ESDF. We show results on a real dataset collected and annotated in our lab.
+            We present a method for automatically modifying a NeRF representation based on a single observation of a non-rigid transformed version of the original scene. Our method defines the transformation as a 3D flow, specifically as a weighted linear blending of rigid transformations of 3D anchor points that are defined on the surface of the scene. In order to identify anchor points, we introduce a novel correspondence algorithm that first matches RGB-based pairs, then leverages multi-view information and 3D reprojection to robustly filter false positives in two steps. We also introduce a new dataset for exploring the problem of modifying a NeRF scene through a single observation. Our dataset contains 113 synthetic scenes leveraging 47 3D assets. We show that our proposed method outperforms NeRF editing methods as well as diffusion-based methods, and we also explore different methods for filtering correspondences. 
           </p>
         </div>
       </div>
@@ -141,7 +139,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/Bn1w9y5aYYg"
+          <iframe src="https://www.youtube.com/embed/oZsA6i9g_yM" 
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
