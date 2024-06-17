@@ -271,7 +271,7 @@ model-viewer {
         <div class="column">
           <div class="columns">
             <div class="column has-text-centered">
-              <span id="GT20" class="button is-info is-rounded">
+              <span id="GT20" class="button is-normal is-rounded">
                 GT
               </span>
               <span id="DreamGaussian20" class="button is-normal is-rounded">
@@ -280,7 +280,7 @@ model-viewer {
               <span id="SINE20" class="button is-normal is-rounded">
                 SINE
               </span>
-              <span id="Ours20" class="button is-normal is-rounded">
+              <span id="Ours20" class="button is-info is-rounded">
                 Ours
               </span>
             </div>
@@ -719,7 +719,7 @@ model-viewer {
     },
   }
 
-  data = data_ap13;
+  // data = data_ap13;
   data = data_ap[n-1];
 
   m1_ = new Array();
@@ -764,7 +764,7 @@ model-viewer {
     for (var j = 0;j<4;j++)
     { 
       var name_suf = "1"+String(i);
-      var method_name = method_list[j]
+      var method_name = method_list[j];
       btn = document.getElementById(method_name+name_suf);
       btn.addEventListener('click', function onClick() {
         document.getElementById('GT'+name_suf).className = 'button is-normal is-rounded';    
