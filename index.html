@@ -145,6 +145,27 @@
       </div>
     </div>
 
+    <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+            viewpoint such as a stabilized camera by playing back the training deformations.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 autoplay
+                 loop
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/temp.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+
     <!--/ Paper video. -->
   </div>
 </section>
@@ -182,6 +203,110 @@ model-viewer {
   height: 250px;
 }
 </style>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class='title is-3'>A</div>
+      <div class="columns">
+        <div class="column">
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                    controls
+                    muted
+                    autoplay
+                    loop
+                    preload
+                    playsinline
+                    width="100%">
+              <source src="./static/videos/temp.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="content has-text-centered">
+            <video id="replay-video"
+                    controls
+                    muted
+                    autoplay
+                    loop
+                    preload
+                    playsinline
+                    width="100%">
+              <source src="./static/videos/temp.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="column">
+          <div class="columns">
+            <div class="column has-text-centered">
+              <span id="gt11" class="button is-info is-rounded">
+                GT
+              </span>
+              <span id="our11" class="button is-normal is-rounded">
+                DreamGaussian
+              </span>
+              <span id="colmap11" class="button is-normal is-rounded">
+                SINE
+              </span>
+              <span id="isdf11" class="button is-normal is-rounded">
+                Ours
+              </span>
+            </div>
+          </div>
+          <div class="columns has-text-centered">
+            <div class="column is-centered">
+              <span class="is-centered has-text-centered">
+                <model-viewer class="is-centered" id='m11' alt="chair" 
+                src="static/models/gt_25.glb" 
+                shadow-intensity="1" 
+                ar environment-image="static/models/thatch_chapel_2k.hdr"
+                auto-rotate rotation-per-second="40deg" 
+                camera-controls touch-action="pan-y"
+                camera-orbit='auto auto 5%'
+                >
+                </model-viewer>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="columns">
+            <div class="column has-text-centered">
+              <span id="gt12" class="button is-info is-rounded">
+                GT
+              </span>
+              <span id="our12" class="button is-normal is-rounded">
+                DreamGaussian
+              </span>
+              <span id="colmap12" class="button is-normal is-rounded">
+                SINE
+              </span>
+              <span id="isdf12" class="button is-normal is-rounded">
+                Ours
+              </span>
+            </div>
+          </div>
+          <div class="columns has-text-centered">
+            <div class="column is-centered">
+              <span class="is-centered has-text-centered">
+                <model-viewer class="is-centered" id='m11' alt="chair" 
+                src="static/models/gt_25.glb" 
+                shadow-intensity="1" 
+                ar environment-image="static/models/thatch_chapel_2k.hdr"
+                auto-rotate rotation-per-second="40deg" 
+                camera-controls touch-action="pan-y"
+                camera-orbit='auto auto 5%'
+                >
+                </model-viewer>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>        
 
 
 <section class="hero">
