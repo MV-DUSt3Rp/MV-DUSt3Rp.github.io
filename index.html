@@ -63,7 +63,7 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
+              <!--
               <span class="link-block">
                 <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Tang_NeRFDeformer_NeRF_Transformation_from_a_Single_View_via_3D_Scene_CVPR_2024_paper.html"
                    class="external-link button is-normal is-rounded is-dark">
@@ -73,7 +73,6 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=oZsA6i9g_yM"
                    class="external-link button is-normal is-rounded is-dark">
@@ -92,14 +91,15 @@
                   <span>Data</span>
                 </a>
               </span>
+              -->
               <!-- Code Link. -->
                <span class="link-block">
-                <a href="https://github.com/nerfdeformer/nerfdeformer"
+                <a href="https://mv-dust3rp.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (coming soon!)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -126,7 +126,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present a method for automatically modifying a NeRF representation based on a single observation of a non-rigid transformed version of the original scene. Our method defines the transformation as a 3D flow, specifically as a weighted linear blending of rigid transformations of 3D anchor points that are defined on the surface of the scene. In order to identify anchor points, we introduce a novel correspondence algorithm that first matches RGB-based pairs, then leverages multi-view information and 3D reprojection to robustly filter false positives in two steps. We also introduce a new dataset for exploring the problem of modifying a NeRF scene through a single observation. Our dataset contains 113 synthetic scenes leveraging 47 3D assets. We show that our proposed method outperforms NeRF editing methods as well as diffusion-based methods, and we also explore different methods for filtering correspondences. 
+            Recent sparse multi-view scene reconstruction advances like \dst\ and \mastthreer no longer require camera calibration and camera pose estimation. However, they only process a pair of views at a time to infer pixel-aligned pointmaps. When dealing with more than two views, a combinatorial number of error prone pairwise reconstructions are usually followed by an expensive global optimization, which often fails to rectify the pairwise reconstruction errors.  To handle more views, reduce errors, and improve inference time, we propose the fast single-stage feed-forward network \mvdustthreer. At its core are multi-view decoder blocks which exchange information across any number of views while considering one reference view. To make our method  robust to reference view selection, we further propose \mvdustthreerp, which employs cross-reference-view blocks to fuse information across different reference view choices. To further enable novel view synthesis, we extend both by adding and jointly training Gaussian splatting heads. Experiments on multi-view stereo reconstruction, multi-view pose estimation, and novel view synthesis confirm that our methods improve significantly upon prior art. Code will be released. 
           </p>
         </div>
       </div>
@@ -134,7 +134,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
- 
+    <!--
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -144,7 +144,7 @@
         </div>
       </div>
     </div>
-
+    -->
     <!-- <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
@@ -793,7 +793,7 @@ model-viewer {
 }
 
 </script>
-
+<!--
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -808,7 +808,7 @@ model-viewer {
 </code></pre>
   </div>
 </section>
-
+-->
 
 <footer class="footer">
   <div class="container">
