@@ -137,7 +137,9 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Overview</h2>
         <p>The proposed Multi-View Dense Unconstrained Stereo 3D Reconstruction Prime (MV-DUSt3R+) is able to reconstructs large scenes from multiple pose-free RGB views. Top row: one single-room scene and one large multi-room scene reconstructed by MV-DUSt3R+ in 0.89 and 1.54 seconds using 12 and 20 input views respectively (only a subset is shown for visualization). Bottom row: MV-DUSt3R+ is able to synthesize novel views by predicting pixel-aligned Gaussian parameters. Reconstruction of such large scenes are challenging for prior methods (e.g. DUSt3R)</p>
+        <br><br>
         <div class="content has-text-centered"> <img src="./static/images/tsr_.png" class="interpolation-image"/> </div>
+        <br>
       </div>
     </div>
 
@@ -145,7 +147,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">MV-DUSt3R</h2>
         <p>Visual tokens for the reference view and other source views are shown in Blue and Green. Black straight solid lines indicate the primary token flow while gray lines indicate secondary token flow.</p>
-        <div class="content has-text-centered"> <img src="./static/images/mvd_.png" class="interpolation-image"/> </div>
+        <br><br><div class="content has-text-centered"> <img src="./static/images/mvd_.png" class="interpolation-image"/> </div><br>
       </div>
     </div>
 
@@ -153,7 +155,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">MV-DUSt3R+</h2>
         <p>DecBlock and CrossRefViewBlock in MV-DUSt3R+: tokens of the reference and other views are highlighted in blue and green, respectively. Each model path uses a different reference view. For clarity, only 1 of stacked DecBlock and CrossRefViewBlock are shown.</p>
-        <div class="content has-text-centered"> <img src="./static/images/crv_.png" class="interpolation-image"/> </div>
+        <br><br><div class="content has-text-centered"> <img src="./static/images/crv_.png" class="interpolation-image"/> </div><br>
       </div>
     </div>
 
@@ -161,7 +163,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Qualitative Results (8~24 views)</h2>
         <p>MVS reconstruction and NVS qualitative results. We show one method in each column, which includes the reconstructed pointcloud and 1 rendered new view. Incorrectly reconstructed geometry is highlighted in red boxes. DUSt3R often introduces incorrect pairwise reconstructions when the scene has multiple objects with similar appearance (e.g., windows, chairs, doors), which can not be recovered by the global optimization. MV-DUSt3R is more robust overall but still sometimes fails to reconstruct geometry accurately in regions far away from the reference view, while MV-DUSt3R+ predicts geometry more evenly across the space.</p>
-        <div class="content has-text-centered"> <img src="./static/images/vis_.png" class="interpolation-image"/> </div>
+        <br><br><div class="content has-text-centered"> <img src="./static/images/vis_.png" class="interpolation-image"/> </div><br>
       </div>
     </div>
 
@@ -169,8 +171,8 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Qualitative Results (100 views)</h2>
         <p>MVS reconstruction results with 100-view inputs on ScanNet and HM3D. 3% of the predicted points with low confidence score are filtered out (the same below). Qualitatively we find the reconstructed scene geometry to be very similar to the groundtruth. This shows that our MV-DUSt3R+ model, trained with 8-view samples, can generalize remarkably well to 100-view inputs for single-room scenes. The inference time for 100 views is 19.1 seconds.</p>
-        <div class="content has-text-centered"> <img src="./static/images/oneh_sc_.png" class="interpolation-image"/> </div>
-        <div class="content has-text-centered"> <img src="./static/images/oneh_hm2_.png" class="interpolation-image"/> </div>
+        <br><br><div class="content has-text-centered"> <img src="./static/images/oneh_sc_.png" class="interpolation-image"/> </div>
+        <div class="content has-text-centered"> <img src="./static/images/oneh_hm2_.png" class="interpolation-image"/> </div><br>
       </div>
     </div>
 
